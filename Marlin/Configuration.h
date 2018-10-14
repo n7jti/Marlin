@@ -744,11 +744,11 @@
  * These options are most useful for the BLTouch probe, but may also improve
  * readings with inductive probes and piezo sensors.
  */
-//#define PROBING_HEATERS_OFF       // Turn heaters off when probing
+#define PROBING_HEATERS_OFF       // Turn heaters off when probing
 #if ENABLED(PROBING_HEATERS_OFF)
   //#define WAIT_FOR_BED_HEATER     // Wait for bed to heat back up between probes (to improve accuracy)
 #endif
-//#define PROBING_FANS_OFF          // Turn fans off when probing
+#define PROBING_FANS_OFF          // Turn fans off when probing
 //#define DELAY_BEFORE_PROBING 200  // (ms) To prevent vibrations from triggering piezo sensors
 
 // A probe that is deployed and stowed with a solenoid pin (SOL1_PIN)
@@ -783,7 +783,7 @@
  */
 #define X_PROBE_OFFSET_FROM_EXTRUDER 43  // X offset: -left  +right  [of the nozzle]
 #define Y_PROBE_OFFSET_FROM_EXTRUDER 20  // Y offset: -front +behind [the nozzle]
-#define Z_PROBE_OFFSET_FROM_EXTRUDER -1.19   // Z offset: -below +above  [the nozzle]
+#define Z_PROBE_OFFSET_FROM_EXTRUDER -1.00   // Z offset: -below +above  [the nozzle]
 
 // Certain types of probes need to stay away from edges
 #define MIN_PROBE_EDGE 10
@@ -1031,7 +1031,7 @@
   // Set the boundaries for probing (where the probe can reach).
   #define LEFT_PROBE_BED_POSITION (X_PROBE_OFFSET_FROM_EXTRUDER) 
   #define RIGHT_PROBE_BED_POSITION (X_BED_SIZE - X_PROBE_OFFSET_FROM_EXTRUDER)
-  #define FRONT_PROBE_BED_POSITION (MIN_PROBE_EDGE + Y_PROBE_OFFSET_FROM_EXTRUDER + 30)
+  #define FRONT_PROBE_BED_POSITION (MIN_PROBE_EDGE + Y_PROBE_OFFSET_FROM_EXTRUDER + 50)
   #define BACK_PROBE_BED_POSITION (Y_BED_SIZE - Y_PROBE_OFFSET_FROM_EXTRUDER)
 
   // Probe along the Y axis, advancing X after each column
